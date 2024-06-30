@@ -53,4 +53,16 @@ public class RandomLoadBalancer implements LoadBalancer{
             lock.readLock().unlock();
         }
     }
+
+    public boolean remove(BackendInstance backendInstance) {
+        if (backendInstance == null || backendInstance.getAddress() == null) {
+            return false;
+        }
+        try {
+            lock.writeLock().lock();
+            return storage.remove(backendInstance.getAddress()) != null;
+        } finally {
+            lock.writeLock().unlock();
+        }
+    }
 }

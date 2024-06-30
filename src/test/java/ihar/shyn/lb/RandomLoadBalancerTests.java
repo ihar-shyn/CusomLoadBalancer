@@ -63,6 +63,19 @@ public class RandomLoadBalancerTests {
     }
 
     @Test
+    void whenRemoveInstanceThatExists_thenReturnTrue_elseFalse() {
+        RandomLoadBalancer randomLoadBalancer = new RandomLoadBalancer(5);
+        BackendInstance instance1 = new BackendInstanceImpl("127.0.0.1");
+        BackendInstance instance2 = new BackendInstanceImpl("127.0.0.2");
+        randomLoadBalancer.register(instance1);
+        randomLoadBalancer.register(instance2);
+
+        assertTrue(randomLoadBalancer.remove(instance1));
+        assertFalse(randomLoadBalancer.remove(instance1));
+        assertTrue(randomLoadBalancer.remove(instance2));
+    }
+
+    @Test
     // Not for production-mode test, just to ensure that random function is working properly
     void whenRegisterSeveralInstance_thenWaitRandomInstance() {
         RandomLoadBalancer randomLoadBalancer = new RandomLoadBalancer(5);
