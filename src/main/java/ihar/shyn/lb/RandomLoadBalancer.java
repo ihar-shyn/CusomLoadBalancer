@@ -1,6 +1,6 @@
 package ihar.shyn.lb;
 
-import ihar.shyn.instance.BackendInstance;
+import ihar.shyn.model.BackendInstance;
 
 import java.util.ArrayList;
 import java.util.List;

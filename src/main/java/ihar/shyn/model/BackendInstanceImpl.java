@@ -1,4 +1,4 @@
-package ihar.shyn.instance;
+package ihar.shyn.model;
 
 import java.util.Objects;
 

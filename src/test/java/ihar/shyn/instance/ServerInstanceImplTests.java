@@ -1,5 +1,7 @@
 package ihar.shyn.instance;
 
+import ihar.shyn.model.BackendInstance;
+import ihar.shyn.model.BackendInstanceImpl;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

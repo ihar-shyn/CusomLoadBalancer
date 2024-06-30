@@ -1,4 +1,4 @@
-package ihar.shyn.instance;
+package ihar.shyn.model;
 
 public interface BackendInstance {
 

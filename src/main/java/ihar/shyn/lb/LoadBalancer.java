@@ -1,6 +1,6 @@
 package ihar.shyn.lb;
 
-import ihar.shyn.instance.BackendInstance;
+import ihar.shyn.model.BackendInstance;
 
 public interface LoadBalancer {
 

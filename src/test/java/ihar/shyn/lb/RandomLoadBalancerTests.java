@@ -1,7 +1,7 @@
 package ihar.shyn.lb;
 
-import ihar.shyn.instance.BackendInstance;
-import ihar.shyn.instance.BackendInstanceImpl;
+import ihar.shyn.model.BackendInstance;
+import ihar.shyn.model.BackendInstanceImpl;
 import org.junit.jupiter.api.Test;
 
 import java.util.stream.IntStream;
