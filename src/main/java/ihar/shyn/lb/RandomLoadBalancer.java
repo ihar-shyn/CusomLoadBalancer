@@ -2,24 +2,20 @@ package ihar.shyn.lb;
 
 import ihar.shyn.model.BackendInstance;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
+import java.util.*;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class RandomLoadBalancer implements LoadBalancer{
 
     private final int maxInstanceCount;
-    private final ConcurrentMap<String, BackendInstance> storage;
+    private final Map<String, BackendInstance> storage;
     private final Random random = new Random();
     private final ReadWriteLock lock = new ReentrantReadWriteLock();
 
     public RandomLoadBalancer(int maxInstanceCount) {
         this.maxInstanceCount = maxInstanceCount;
-        storage = new ConcurrentHashMap<>(maxInstanceCount);
+        storage = new HashMap<>(maxInstanceCount);
     }
 
     @Override
