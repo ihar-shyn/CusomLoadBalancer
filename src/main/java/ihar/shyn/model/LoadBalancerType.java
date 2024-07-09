@@ -1,2 +1,5 @@
-package ihar.shyn.service;public enum LoadBalancerType {
+package ihar.shyn.model;
+
+public enum LoadBalancerType {
+    ROUND_ROBIN, RANDOM
 }
